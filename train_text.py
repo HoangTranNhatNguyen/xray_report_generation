@@ -80,8 +80,8 @@ if __name__ == "__main__":
         dataset = MIMIC('/home/hoang/Datasets/MIMIC/', INPUT_SIZE, view_pos=['AP','PA','LATERAL'], max_views=MAX_VIEWS, sources=SOURCES, targets=TARGETS)
         train_data, val_data, test_data = dataset.get_subsets(pvt=0.9, seed=0, generate_splits=True, debug_mode=False, train_phase=(PHASE == 'TRAIN'))
         
-        VOCAB_SIZE = len(dataset.vocab)
-        POSIT_SIZE = dataset.max_len
+        VOCAB_SIZE = len(dataset.vocab) # The dataset vocabulary size
+        POSIT_SIZE = dataset.max_len # The maximum length of input text
         COMMENT = 'MaxView{}_NumLabel{}'.format(MAX_VIEWS, NUM_LABELS)
 
     elif DATASET_NAME == 'NLMCXR': # The Open-I dataset
