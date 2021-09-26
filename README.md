@@ -28,6 +28,12 @@ We use two datasets for experiments to validate our method:
 
 
 # How to train
+## LSTM CheXpert Labeler and Interpreter
+- Use the train_text.py to train LSTM CheXpert labeler and Interpreter. Please note down the seed number to avoid data leakage for later use.
+
+## Classifier and Generator
+- Freeze the Interpreter parameters.
+- Use the train_full.py to train the classifier, generator simultanuously.
 
 # How to test
 
